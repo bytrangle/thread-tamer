@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "dev": {
+    "subreddit": "thread_tamer_dev"
+  },
+  "name": "thread-tamer",
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "triggers": {
+    "onAppInstall": "/internal/triggers/on-app-install"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "permissions": {
+    "reddit": true
+  }
+}
