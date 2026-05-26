@@ -4,6 +4,14 @@
     "subreddit": "thread_tamer_dev"
   },
   "name": "thread-tamer",
+  "scheduler": {
+    "tasks": {
+      "daily-cleanup": {
+        "endpoint": "/internal/scheduler/daily-cleanup",
+        "cron": "0 2 * * *"
+      }
+    }
+  },
   "server": {
     "dir": "dist/server",
     "entry": "index.cjs"
