@@ -84,7 +84,8 @@ triggers.post('/on-post-submit', async (c) => {
   const similarPostIds = [...sharedWeights.entries()]
     .filter(([, weight]) => matchedWeight > 0 && weight / matchedWeight >= SIMILARITY_THRESHOLD)
     .sort(([, a], [, b]) => b - a)
-    .map(([id]) => id);
+    .map(([id]) => id)
+    .slice(0, 5);
   console.log('sharedWeights:', [...sharedWeights.entries()]);
   console.log('similarPostIds:', similarPostIds);
   if (similarPostIds.length > 0) {
