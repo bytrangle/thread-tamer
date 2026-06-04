@@ -27,3 +27,11 @@ Also, it only performs matching on post titles only. Post bodies are not analyze
 4. Click "Install"
 
 The app will start indexing your subreddit's historic posts within 90 days. Once the indexing finishes, you will get a Modmail notification.
+
+## Changelog
+
+0.1.0 - 2026-06-04
+
+- Index last 90 days of subreddit posts on install
+- Tokenize new post titles and compute TF-IDF style similarity
+- Post a stickied, distinguished comment listing similar past posts
